@@ -5,8 +5,13 @@
 	<title>El primer script</title>
 		
 </head>
+<style type="text/css">
+	body{
+		background-color: lightblue;
+	}
+</style>
 <body>
-<div id="zona" style="width:300px; height:40px; background:beige;"></div>
+<div id="zona" style="width:300px; height:40px; background:magenta;"></div>
 <script type="text/javascript">
 window.onload = function()
 {
@@ -34,23 +39,23 @@ function muestraInformacion(elEvento) {
 		var mitdaY = dimensiones[1]/2;
 		if((coordenadaX<mitdaX)&&(coordenadaY<mitdaY)){
 			mensaje = "arriba a la izquierda";
-			document.getElementById('zona').style.marginTop=(coordenadaY-60)+'px';//'0px';
+			document.getElementById('zona').style.marginTop=(coordenadaY-70)+'px';//'0px';
 			document.getElementById('zona').style.marginLeft=(coordenadaX-10)+'px';
 		}
 
 		if((coordenadaX>mitdaX)&&(coordenadaY<mitdaY)){
 			mensaje = "arriba a la derecha";
-			document.getElementById('zona').style.marginTop=(coordenadaY-50)+'px';//'0px';
+			document.getElementById('zona').style.marginTop=(coordenadaY-70)+'px';//'0px';
 			document.getElementById('zona').style.marginLeft=(coordenadaX-10)+'px';//'800px';
 		}
 		if((coordenadaX<mitdaX)&&(coordenadaY>mitdaY)){
 			mensaje = "abajo a la izquierda";
-			document.getElementById('zona').style.marginTop=(coordenadaY-50)+'px';//'600px';
+			document.getElementById('zona').style.marginTop=(coordenadaY-70)+'px';//'600px';
 			document.getElementById('zona').style.marginLeft=(coordenadaX-10)+'px';//'0px';
 		}
 		if((coordenadaX>mitdaX)&&(coordenadaY>mitdaY)){
 			mensaje = "abajo a la derecha";
-			document.getElementById('zona').style.marginTop=(coordenadaY-50)+'px';//'600px';
+			document.getElementById('zona').style.marginTop=(coordenadaY-70)+'px';//'600px';
 			document.getElementById('zona').style.marginLeft=(coordenadaX-10)+'px';//'800px';
 		}
 		document.getElementById('zona').innerHTML = '<h3>hiciste click '+ mensaje+'</h3>';
